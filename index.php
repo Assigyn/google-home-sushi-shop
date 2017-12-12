@@ -13,16 +13,16 @@ if ($method == "POST") {
         case 'médium':
             $speech = "L'équilibre est toujours une bonne chose";
             break;
-
         case 'débutant':
             $speech = "Vous avez raison, mieux vaut commencer léger";
             break;
-
         case 'difficile':
             $speech = "Vous avez de l'audace, bravo !";
             break;
+        default:
+            $speech = "Désolé, je n'ai pas saisi le niveau de difficulté ?";
+            break;
     }
-
 
     $response = new \stdClass();
     $response->speech = "";
@@ -30,7 +30,8 @@ if ($method == "POST") {
     $response->source = "webhook";
     echo json_encode($response);
 
-} else {
+}
+else {
     echo "Method not allowed";
 }
 
