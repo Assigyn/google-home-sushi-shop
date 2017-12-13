@@ -16,6 +16,8 @@ if ($method == "POST") {
         switch ($difficulty){
             case 'quizz':
             case 'Quizz':
+            case 'quiz':
+            case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
                  Première question : quelle est la capitale actuelle du Japon ?";
                 break;
