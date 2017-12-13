@@ -48,10 +48,23 @@ if ($method == "POST") {
                 massif, si vous voyez ce que je veux dire.";
                 break;
             case 'Sumo':
-                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?";
+                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?
+                Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
+                break;
+        }
+    }
+
+    if(isset($DebquestionThree)){
+        switch($DebquestionThree){
+            case 'Thon':
+                $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
+                trentaine d'euros.";
+                break;
+            default:
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un poisson à la chair bien rouge.";
                 break;
         }
     }
