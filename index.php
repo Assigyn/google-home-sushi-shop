@@ -11,7 +11,6 @@ if ($method == "POST") {
     $DebquestionOne = $json->result->parameters->DebquestionOne;
     $DebquestionTwo = $json->result->parameters->DebquestionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
-    $MedquestionTwo = $json->result->parameters->MedquestionTwo;
 
     if(isset($difficulty)){
         switch ($difficulty){
@@ -80,19 +79,18 @@ if ($method == "POST") {
 
     /** Answers for Médium Questions ***/
 
+    $MedquestionTwo = $json->result->parameters->MedquestionTwo;
+
     if(isset($MedquestionTwo)){
         switch($MedquestionTwo){
-            case 'Couleur':
-            case 'Couleurs':
-                $speech = "Très bon choix. Répétez après moi : Kuroi. Shiroi. Aoi. Akai.";
+            case 'couleur':
+                $speech = "Couleur repérée.";
                 break;
-            case 'Chiffres':
-            case 'Chiffre':
-                $speech = "Quelqu'un qui aime les maths ? Intéressant. Répétez après moi : Itchi. Ni. San. Yon. Go.";
+            case 'chiffre':
+                $speech = "Chiffre repéré.";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Veuillez recommencer.";
-                break;
+                $speech = "Oops";
         }
     }
 
