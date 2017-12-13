@@ -41,6 +41,8 @@ if ($method == "POST") {
         switch($DebquestionOne){
             case 'rouge':
             case 'Rouge':
+            case 'Bordeaux':
+            case 'bordeaux':
                 $speech = "Bravo, la réponse est rouge.
                 Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte..
                 Voici une autre question : Quelle ville était capitale avant Tokyo ?";
