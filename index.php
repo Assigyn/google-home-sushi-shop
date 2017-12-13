@@ -37,8 +37,6 @@ if ($method == "POST") {
 
     /** Answers for quizz Questions ***/
 
-    /** Answers for quizz Questions ***/
-
     if(isset($questionOne)){
         switch($questionOne){
             case 'Tokyo':
@@ -47,7 +45,7 @@ if ($method == "POST") {
                            Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse...";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
                 break;
         }
     }
@@ -69,7 +67,7 @@ if ($method == "POST") {
                 Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
                 break;
         }
     }
@@ -81,15 +79,14 @@ if ($method == "POST") {
             case 'Otoro':
             case 'otoro':
                 $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
-                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux sushis spéciaux sur votre prochaine
-                commande, grâce au code promo suivant : SUSHISPECIAUX. A plus tard pour un prochain défi !";
+                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse, ce n'est pas bien loin.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un poisson à la chair bien rouge.";
                 break;
         }
     }
-
 
     /** Answers for civilisation Questions ***/
 
@@ -101,13 +98,15 @@ if ($method == "POST") {
             case 'Anecdote':
             case 'Japon':
             case 'japon':
-                $speech = "Le japon est un pays insulaire, incroyable non ?";
+                $speech = "Le Japon est un des seuls pays asiatiques qui n'a jamais été colonisé par les Européens. Il a d'ailleurs fermé ses frontières près de
+                 300 ans entre le 16ème et le 19ème siècle. Allez, un dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             case 'Mot':
             case 'mot':
             case 'japonais':
             case 'Japonais':
-                $speech = "Le mot Nihon, qui signifie Japon, veut dire pays du soleil. ";
+                $speech = "Le mot Kami en japonais a plusieurs signification : il peut signifier Dieu, mais aussi papier.
+                Allez, un dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
@@ -124,21 +123,21 @@ if ($method == "POST") {
             case 'Cinéma':
             case 'cinéma':
                 $speech = "Le Japon a exporté de nombreux films aux quatre coins du globe. Mais c'est surtout l'excellence de ses dessins animés qui est reconnue par tous.
-                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé
+                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'musique':
             case 'Musique':
                 $speech = "La musique japonaise est un art qui était autrefois très lié aux arts du théâtre. Aujourd'hui encore malgré l'arrivée des codes occidentaux, il n'est
-                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé
+                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'littérature':
             case 'Littérature':
                 $speech = "De nombreux auteurs japonais sont connus en France, mais paradoxalement, le plus célèbre d'entre eux est très peu lu par chez nous. Il s'agit de Natsumé
-                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé
+                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
@@ -157,6 +156,5 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
-
 
 ?>
