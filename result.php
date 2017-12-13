@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method == "POST") {
@@ -19,7 +21,7 @@ if ($method == "POST") {
             case 'quiz':
             case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
-                 De quelle couleur est le cercle sur le drapeau japonais ?";
+                 Première question : quelle est la capitale actuelle du Japon ?";
                 break;
             case 'civilisation':
             case 'Civilisation':
@@ -39,11 +41,10 @@ if ($method == "POST") {
 
     if(isset($DebquestionOne)){
         switch($DebquestionOne){
-            case 'rouge':
-            case 'rouge':
-                $speech = "Bravo, la réponse est rouge.
-                Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte..
-                Voici une autre question : Quelle ville était capitale avant Tokyo ?";
+            case 'Tokyo':
+            case 'tokyo':
+                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
+                           Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse.";
@@ -53,11 +54,19 @@ if ($method == "POST") {
 
     if(isset($DebquestionTwo)){
         switch($DebquestionTwo){
-            case 'Kyoto':
-            case 'kyoto':
-                $speech = "Bravo, bonne réponse !
-                Kyoto possède un temple immense : le pavillon d'or..
-                Nous arrivons enfin à la question finale. Comment s'appelle le monstre le connu au Japon ?";
+            case 'Judo':
+            case 'judo':
+            case 'Judoka':
+            case 'judoka':
+                $speech = "Hm... ce n'est pas la réponse que j'attendais, même si le Judo est effectivement un sport national. Je pensais à quelque chose de plus
+                massif, si vous voyez ce que je veux dire.";
+                break;
+            case 'Sumo':
+            case 'sumo':
+            case 'Sumotori':
+            case 'sumotori':
+                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?
+                Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse... courage !";
@@ -67,12 +76,13 @@ if ($method == "POST") {
 
     if(isset($DebquestionThree)){
         switch($DebquestionThree){
-            case 'Godzilla':
-            case 'godzilla':
-                $speech = "Bonne réponse !
-                Godzilla s'appelle en réalité Gojira. Il figure dans plus d'une vingtaine de films. .
-                Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux sushis sur votre prochaine
-                commande, grâce au code promo suivant : 'TWOSUSHIS'. A plus tard pour un prochain défi !";
+            case 'Thon':
+            case 'thon':
+            case 'Otoro':
+            case 'otoro':
+                $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
+                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             default:
                 $speech = "Aïe, ce n'est pas la bonne réponse... ";
@@ -148,6 +158,5 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
-
 
 ?>
