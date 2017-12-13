@@ -8,7 +8,8 @@ if ($method == "POST") {
     $json = json_decode($requestBody);
 
     $difficulty = $json->result->parameters->difficulty;
-    $questionOne = $json->result->parameters->questionOne;
+    $DebquestionOne = $json->result->parameters->DebquestionOne;
+    $DebquestionTwo = $json->result->parameters->DebquestionTwo;
 
     if(isset($difficulty)){
         switch ($difficulty){
@@ -28,15 +29,29 @@ if ($method == "POST") {
         }
     }
 
-    if(isset($questionOne)){
-        switch($questionOne){
+    if(isset($DebquestionOne)){
+        switch($DebquestionOne){
             case 'Tokyo':
-                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville
-            du Japon. Son agglomération est peuplée de 42 millions d'habitants.";
+                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
+                           Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette
-            ville est une des plus densément peulée du monde.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
+                break;
+        }
+    }
+
+    if(isset($DebquestionTwo)){
+        switch($DebquestionTwo){
+            case 'Judo':
+                $speech = "Hm... ce n'est pas la réponse que j'attendais, même si le Judo est effectivement un sport national. Je pensais à quelque chose de plus
+                massif, si vous voyez ce que je veux dire.";
+                break;
+            case 'Sumo':
+                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?";
+                break;
+            default:
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
                 break;
         }
     }
