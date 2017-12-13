@@ -8,7 +8,7 @@ if ($method == "POST") {
     $json = json_decode($requestBody);
 
     $difficulty = $json->result->parameters->difficulty;
-    $DebquestionOne = $json->result->parameters->DebquestionOne;
+    $answerQ2 = $json->result->parameters->answerQ2;
     $DebquestionTwo = $json->result->parameters->DebquestionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
 
@@ -37,8 +37,8 @@ if ($method == "POST") {
 
     /** Answers for quizz Questions ***/
 
-    if(isset($DebquestionOne)){
-        switch($DebquestionOne){
+    if(isset($answerQ2)){
+        switch($answerQ2){
             case 'Cercle':
             case 'cercle':
                 $speech = "Bravo, la réponse est cercle.
