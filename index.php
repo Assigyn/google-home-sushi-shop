@@ -8,8 +8,6 @@ if ($method == "POST") {
     $json = json_decode($requestBody);
 
     $difficulty = $json->result->parameters->difficulty;
-    $answerQ2 = $json->result->parameters->answerQ2;
-    $answerQ3 = $json->result->parameters->answerQ3;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
 
     if(isset($difficulty)){
@@ -37,6 +35,8 @@ if ($method == "POST") {
 
     /** Answers for quizz Questions ***/
 
+    $answerQ2 = $json->result->parameters->answerQ2;
+
     if(isset($answerQ2)){
         switch($answerQ2){
             case 'Cercle':
@@ -50,6 +50,8 @@ if ($method == "POST") {
                 break;
         }
     }
+
+    $answerQ3 = $json->result->parameters->answerQ3;
 
     if(isset($answerQ3)){
         switch($answerQ3){
