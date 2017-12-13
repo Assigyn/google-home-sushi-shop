@@ -83,8 +83,10 @@ if ($method == "POST") {
     if(isset($MedquestionTwo)){
         switch($MedquestionTwo){
             case 'Couleur':
+            case 'Couleurs':
                 $speech = "Très bon choix. Répétez après moi : Kuroi. Shiroi. Aoi. Akai.";
                 break;
+            case 'Chiffres':
             case 'Chiffre':
                 $speech = "Quelqu'un qui aime les maths ? Intéressant. Répétez après moi : Itchi. Ni. San. Yon. Go.";
                 break;
