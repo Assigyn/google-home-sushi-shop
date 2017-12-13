@@ -53,11 +53,12 @@ if ($method == "POST") {
 
     $answerQ3 = $json->result->parameters->answerQ3;
 
-
     if(isset($answerQ3)){
 
         switch ($answerQ3){
             case 'quatre':
+                case 'Quatre':
+                case '4':
                 $speech = "Génial !";
                 break;
             default:
