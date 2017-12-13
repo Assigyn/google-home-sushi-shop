@@ -19,7 +19,7 @@ if ($method == "POST") {
             case 'quiz':
             case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
-                 Première question : quelle est la capitale actuelle du Japon ?";
+                 Première question : Quel figure géométrique est visible sur le drapeau japonais ?";
                 break;
             case 'civilisation':
             case 'Civilisation':
@@ -39,9 +39,9 @@ if ($method == "POST") {
 
     if(isset($questionOne)){
         switch($questionOne){
-            case 'Tokyo':
-            case 'tokyo':
-                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
+            case 'Cercle':
+            case 'cercle':
+                $speech = "Bonne réponse ! Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte.'
                            Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
@@ -123,21 +123,21 @@ if ($method == "POST") {
             case 'Cinéma':
             case 'cinéma':
                 $speech = "Le Japon a exporté de nombreux films aux quatre coins du globe. Mais c'est surtout l'excellence de ses dessins animés qui est reconnue par tous.
-                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé 
+                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'musique':
             case 'Musique':
                 $speech = "La musique japonaise est un art qui était autrefois très lié aux arts du théâtre. Aujourd'hui encore malgré l'arrivée des codes occidentaux, il n'est
-                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé 
+                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'littérature':
             case 'Littérature':
                 $speech = "De nombreux auteurs japonais sont connus en France, mais paradoxalement, le plus célèbre d'entre eux est très peu lu par chez nous. Il s'agit de Natsumé
-                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé 
+                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
