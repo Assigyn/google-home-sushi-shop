@@ -101,7 +101,7 @@ if ($method == "POST") {
             case 'Anecdote':
             case 'Japon':
             case 'japon':
-                $speech = "Le pays est un pays très apprécié par Jacques Chirac. En effet l'ancien président aime énormément 
+                $speech = "Le Japon est un pays très apprécié par Jacques Chirac. En effet l'ancien président aime énormément 
                     les Sumotori, au point d'avoir souhaité en être un dans sa prime jeunesse.";
                 break;
             case 'Mot':
