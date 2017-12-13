@@ -19,7 +19,7 @@ if ($method == "POST") {
             case 'quiz':
             case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
-                 De quelle couleur est le cercle sur le drapeau japonais ?";
+                 Quel figure géométrique est visible sur le drapeau japonais ?";
                 break;
             case 'civilisation':
             case 'Civilisation':
@@ -39,11 +39,9 @@ if ($method == "POST") {
 
     if(isset($DebquestionOne)){
         switch($DebquestionOne){
-            case 'rouge':
-            case 'Rouge':
-            case 'Bordeaux':
-            case 'bordeaux':
-                $speech = "Bravo, la réponse est rouge.
+            case 'Cercle':
+            case 'cercle':
+                $speech = "Bravo, la réponse est cercle.
                 Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte..
                 Voici une autre question : Quelle ville était capitale avant Tokyo ?";
                 break;
@@ -150,6 +148,7 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
+
 
 
 ?>
