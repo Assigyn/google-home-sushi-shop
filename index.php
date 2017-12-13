@@ -81,8 +81,8 @@ if ($method == "POST") {
             case 'Otoro':
             case 'otoro':
                 $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
-                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir un Sushi signature sur votre prochaine
-                commande, grâce au code promo suivant : SIGNATURESUSHI. A plus tard pour un prochain défi !";
+                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux sushis spéciaux sur votre prochaine
+                commande, grâce au code promo suivant : SUSHISPECIAUX. A plus tard pour un prochain défi !";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse, ce n'est pas bien loin.";
@@ -101,15 +101,13 @@ if ($method == "POST") {
             case 'Anecdote':
             case 'Japon':
             case 'japon':
-                $speech = "Le Japon est un des seuls pays asiatiques qui n'a jamais été colonisé par les Européens. Il a d'ailleurs fermé ses frontières près de
-                 300 ans entre le 16ème et le 19ème siècle. Allez, un dernier effort, récitez après moi : Sushi Shop ga suki desu";
+                $speech = "Le japon est un pays insulaire, incroyable non ?";
                 break;
             case 'Mot':
             case 'mot':
             case 'japonais':
             case 'Japonais':
-                $speech = "Le mot Kami en japonais a plusieurs signification : il peut signifier Dieu, mais aussi papier.
-                Allez, un dernier effort, récitez après moi : Sushi Shop ga suki desu";
+                $speech = "Le mot Nihon, qui signifie Japon, veut dire pays du soleil. ";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
@@ -159,7 +157,6 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
-
 
 
 ?>
