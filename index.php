@@ -14,20 +14,21 @@ if ($method == "POST") {
 
     if(isset($difficulty)){
         switch ($difficulty){
-            case 'débutant':
-            case 'facile':
+            case 'quizz':
+            case 'Quizz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
                  Première question : quelle est la capitale actuelle du Japon ?";
                 break;
-            case 'médium':
-            case 'moyen':
-                $speech = "L'équilibre est toujours une bonne chose : faisons un petit cours de Japonais ! Tout d'abord, quel est votre nom ?";
+            case 'civilisation':
+            case 'Civilisation':
+                $speech = "Les questions de civilisation sont toujours fascinantes : faisons un petit cours de Japonais ! Tout d'abord, quel est votre nom ?";
                 break;
-            case 'difficile':
-                $speech = "Vous avez de l'audace, bravo !";
+            case 'culture':
+            case 'Culture':
+                $speech = "La culture japonaise est très vivante !";
                 break;
             default:
-                $speech = "Désolé, je n'ai pas saisi le niveau de difficulté ?";
+                $speech = "Désolé, je n'ai pas saisi le thème ?";
                 break;
         }
     }
@@ -83,32 +84,15 @@ if ($method == "POST") {
 
     if(isset($MedquestionOne)){
         switch($MedquestionOne){
-            case 'couleurs':
-            case 'couleur':
-                $speech = "Les couleurs sont un bon choix. Répétez après moi : Kuro. Shiro.";
+            case 'japon':
+            case 'Japon':
+                $speech = "Le Japon est un des seuls pays asiatiques qui n'a jamais été colonisé par les Européens. Allez, un 
+                dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
-            case 'chiffres':
-            case 'chiffre':
-                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : shi";
-                break;
-            default:
-                $speech = "Je n'ai pas compris votre choix, désolé.";
-                break;
-        }
-    }
-
-    $MedquestionThree = $json->result->parameters->MedquestionThree;
-
-    if(isset($MedquestionThree)){
-        switch($MedquestionThree){
-            case 'Kuro Shiro':
-            case 'Kuro shiro':
-            case 'kuro shiro':
-                $speech = "Vous venez de réciter les couleurs suivantes : noir et blanc. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
-                break;
-            case 'Yon':
-            case 'yon':
-                $speech = "Bien ! Yon est le chiffre 4 en japonais. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
+            case 'Mot':
+            case 'mot':
+                $speech = "Le mot Kami en japonais a plusieurs signification : il peut signifier Dieu, mais aussi papier.
+                Allez, un dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
