@@ -42,7 +42,7 @@ if ($method == "POST") {
             case 'Cercle':
             case 'cercle':
                 $speech = "Bonne réponse ! Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte.'
-                           Voici une autre question : quel sport fait la fierté des japonais ?";
+                           Voici une autre question : Quelle ville était capitale avant Tokyo ?";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
@@ -52,18 +52,9 @@ if ($method == "POST") {
 
     if(isset($questionTwo)){
         switch($questionTwo){
-            case 'Judo':
-            case 'judo':
-            case 'Judoka':
-            case 'judoka':
-                $speech = "Hm... ce n'est pas la réponse que j'attendais, même si le Judo est effectivement un sport national. Je pensais à quelque chose de plus
-                massif, si vous voyez ce que je veux dire.";
-                break;
-            case 'Sumo':
-            case 'sumo':
-            case 'Sumotori':
-            case 'sumotori':
-                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?
+            case 'Kyoto':
+            case 'kyoto':
+                $speech = "Bravo, bonne réponse ! Kyoto possède un temple immense : le pavillon d'or..
                 Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
@@ -156,5 +147,6 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
+
 
 ?>
