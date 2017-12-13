@@ -10,6 +10,7 @@ if ($method == "POST") {
     $difficulty = $json->result->parameters->difficulty;
     $DebquestionOne = $json->result->parameters->DebquestionOne;
     $DebquestionTwo = $json->result->parameters->DebquestionTwo;
+    $DebquestionThree = $json->result->parameters->DebquestionThree;
 
     if(isset($difficulty)){
         switch ($difficulty){
