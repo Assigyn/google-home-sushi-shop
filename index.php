@@ -89,7 +89,7 @@ if ($method == "POST") {
                 break;
             case 'chiffres':
             case 'chiffre':
-                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : Itchi. Ni. San. Yon. Go.";
+                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : Itchi. Ni. San.";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
