@@ -79,18 +79,19 @@ if ($method == "POST") {
 
     /** Answers for Médium Questions ***/
 
-    $MedquestionTwo = $json->result->parameters->MedquestionTwo;
+    $MedquestionOne = $json->result->parameters->MedquestionOne;
 
-    if(isset($MedquestionTwo)){
-        switch($MedquestionTwo){
-            case 'couleur':
+    if(isset($MedquestionOne)){
+        switch($MedquestionOne){
+            case 'couleurs':
                 $speech = "Couleur repérée.";
                 break;
-            case 'chiffre':
+            case 'chiffres':
                 $speech = "Chiffre repéré.";
                 break;
             default:
                 $speech = "Oops";
+                break;
         }
     }
 
