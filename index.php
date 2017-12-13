@@ -51,7 +51,7 @@ if ($method == "POST") {
         }
     }
 
-    if(isset($answerQ3){
+    if(isset($answerQ3)){
         switch($answerQ3){
             case 'Kyoto':
             case 'kyoto':
