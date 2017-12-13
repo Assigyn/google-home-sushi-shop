@@ -97,7 +97,7 @@ if ($method == "POST") {
         }
     }
 
-    $MedquestionThree = $json->result->parameters->MedquestionOne;
+    $MedquestionThree = $json->result->parameters->MedquestionThree;
 
     if(isset($MedquestionThree)){
         switch($MedquestionThree){
