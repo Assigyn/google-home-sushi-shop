@@ -85,7 +85,7 @@ if ($method == "POST") {
         switch($MedquestionOne){
             case 'couleurs':
             case 'couleur':
-                $speech = "Les couleurs sont un bon choix. Répétez après moi : Kuro. Shiro. Aka. Ao.";
+                $speech = "Les couleurs sont un bon choix. Répétez après moi : Kuro. Shiro.";
                 break;
             case 'chiffres':
             case 'chiffre':
@@ -101,15 +101,15 @@ if ($method == "POST") {
 
     if(isset($MedquestionThree)){
         switch($MedquestionThree){
-            case 'Kuro Shiro Aka Ao':
-            case 'Kuro shiro aka ao.':
-            case 'kuro shiro aka ao.':
-                $speech = "Vous venez de réciter les couleurs suivantes : noir, blanc, rouge et bleu. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
+            case 'Kuro Shiro':
+            case 'Kuro shiro':
+            case 'kuro shiro':
+                $speech = "Vous venez de réciter les couleurs suivantes : noir et blanc. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
-            case 'Itchi Ni San Yon Go':
-            case 'Itchi ni san yon go':
-            case 'itchi ni san yon go':
-                $speech = "Bien ! Vous savez désormais compter jusqu'à 5, pas mal. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
+            case 'Ichi Ni San':
+            case 'Ichi ni san':
+            case 'ichi ni san':
+                $speech = "Bien ! Vous savez désormais compter jusqu'à 3, pas mal. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
