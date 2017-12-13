@@ -19,7 +19,7 @@ if ($method == "POST") {
             case 'quiz':
             case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
-                 Première question : Quel figure géométrique est visible sur le drapeau japonais ?";
+                 Première question : quelle est la capitale actuelle du Japon ?";
                 break;
             case 'civilisation':
             case 'Civilisation':
@@ -39,27 +39,36 @@ if ($method == "POST") {
 
     if(isset($questionOne)){
         switch($questionOne){
-            case 'Cercle' :
-            case 'cercle' :
-                $speech = "Bonne réponse ! Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte.'
-                           Voici une autre question : Quelle ville était capitale avant Tokyo ?";
+            case 'Tokyo':
+            case 'tokyo':
+                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
+                           Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
                 break;
         }
     }
 
-
     if(isset($questionTwo)){
-        if ($questionTwo == 'Tokyo') {
-            $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
-                   Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
-        }
-
-        elseif ($questionTwo == 'tokyo') {
-            $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
-                   Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
+        switch($questionTwo){
+            case 'Judo':
+            case 'judo':
+            case 'Judoka':
+            case 'judoka':
+                $speech = "Hm... ce n'est pas la réponse que j'attendais, même si le Judo est effectivement un sport national. Je pensais à quelque chose de plus
+                massif, si vous voyez ce que je veux dire.";
+                break;
+            case 'Sumo':
+            case 'sumo':
+            case 'Sumotori':
+            case 'sumotori':
+                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?
+                Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
+                break;
+            default:
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
+                break;
         }
     }
 
@@ -114,21 +123,21 @@ if ($method == "POST") {
             case 'Cinéma':
             case 'cinéma':
                 $speech = "Le Japon a exporté de nombreux films aux quatre coins du globe. Mais c'est surtout l'excellence de ses dessins animés qui est reconnue par tous.
-                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé
+                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'musique':
             case 'Musique':
                 $speech = "La musique japonaise est un art qui était autrefois très lié aux arts du théâtre. Aujourd'hui encore malgré l'arrivée des codes occidentaux, il n'est
-                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé
+                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'littérature':
             case 'Littérature':
                 $speech = "De nombreux auteurs japonais sont connus en France, mais paradoxalement, le plus célèbre d'entre eux est très peu lu par chez nous. Il s'agit de Natsumé
-                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé
+                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé 
                 à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
@@ -147,6 +156,5 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
-
 
 ?>
