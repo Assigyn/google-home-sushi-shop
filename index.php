@@ -52,11 +52,11 @@ if ($method == "POST") {
 
     if(isset($questionTwo)){
         switch($questionTwo){
-            case 'Kyoto' :
+            case 'Tokyo' :
                 $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
                            Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
                 break;
-            case 'kyoto' :
+            case 'tokyo' :
                 $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
                            Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
                 break;
