@@ -45,20 +45,20 @@ if ($method == "POST") {
                            Voici une autre question : Quelle ville était capitale avant Tokyo ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
 
     if(isset($questionTwo)){
         switch($questionTwo){
-            case 'Kyoto':
-            case 'kyoto':
+            case 'ballon':
+            case 'Ballon':
                 $speech = "Bravo, bonne réponse ! Kyoto possède un temple immense : le pavillon d'or..
                 Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
