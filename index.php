@@ -52,10 +52,10 @@ if ($method == "POST") {
 
     if(isset($questionTwo)){
         switch($questionTwo){
-            case 'ballon':
-            case 'Ballon':
-                $speech = "Bravo, bonne réponse ! Kyoto possède un temple immense : le pavillon d'or..
-                Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
+            case 'Kyoto':
+            case 'kyoto':
+                $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
+                           Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse.";
@@ -67,6 +67,8 @@ if ($method == "POST") {
         switch($questionThree){
             case 'Thon':
             case 'thon':
+            case 'Otoro':
+            case 'otoro':
                 $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
                 trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
@@ -145,6 +147,7 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
+
 
 
 ?>
