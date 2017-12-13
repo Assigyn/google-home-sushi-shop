@@ -101,15 +101,13 @@ if ($method == "POST") {
             case 'Anecdote':
             case 'Japon':
             case 'japon':
-                $speech = "Le Japon est un pays très apprécié par Jacques Chirac. En effet l'ancien président aime énormément 
-                    les Sumotori, au point d'avoir souhaité en être un dans sa prime jeunesse.";
+                $speech = "Le Japon est un pays très apprécié par Jacques Chirac. En effet l'ancien président aime énormément les Sumotori, au point d'avoir souhaité en être un dans sa prime jeunesse. Merci d'avoir participé à la minute civilisation de la journée. Sushi Shop est heureux de vous offrir deux sushis spéciaux sur votre prochaine commande, grâce au code promo suivant : SUSHISPECIAUX. A plus tard pour un prochain défi !";
                 break;
             case 'Mot':
             case 'mot':
             case 'japonais':
             case 'Japonais':
-                $speech = "Au Japon, Noël se dit Kurisumassu, et rime souvent avec KFC. Les jeunes japonais sont en effet fous
-                de cette chaine de fast food et n'hésitent pas à s'offrir des ailes de poulet durant ce jour très spécial.";
+                $speech = "Au Japon, Noël se dit Kurisumassu, et rime souvent avec KFC. Les jeunes japonais sont en effet fous de cette chaine de fast food et n'hésitent pas à s'offrir des ailes de poulet durant ce jour très spécial. Merci d'avoir participé à la minute civilisation de la journée. Sushi Shop est heureux de vous offrir deux sushis spéciaux sur votre prochaine commande, grâce au code promo suivant : SUSHISPECIAUX. A plus tard pour un prochain défi !";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
