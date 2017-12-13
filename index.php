@@ -84,13 +84,15 @@ if ($method == "POST") {
     if(isset($MedquestionOne)){
         switch($MedquestionOne){
             case 'couleurs':
-                $speech = "Couleur repérée.";
+            case 'couleur':
+                $speech = "Les couleurs sont un bon choix. Répétez après moi : Kuro. Shiro. Aka. Ao.";
                 break;
             case 'chiffres':
-                $speech = "Chiffre repéré.";
+            case 'chiffre':
+                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : Itchi. Ni. San. Yon. Go.";
                 break;
             default:
-                $speech = "Oops";
+                $speech = "Je n'ai pas compris votre choix, désolé.";
                 break;
         }
     }
