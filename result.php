@@ -14,7 +14,6 @@ $anecdote = array(
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +40,7 @@ $anecdote = array(
     <h1>Voici votre code à copier-coller dans le fichier index.php pour générer le nouveau défi</h1>
 
     <code>
-
+        <pre>
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method == "POST") {
@@ -206,6 +205,7 @@ $anecdote = array(
             echo "Method not allowed";
         }
 
+        </pre>
 </code>
 
 </div>
