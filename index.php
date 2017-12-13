@@ -8,6 +8,8 @@ if ($method == "POST") {
     $json = json_decode($requestBody);
 
     $difficulty = $json->result->parameters->difficulty;
+    $DebquestionOne = $json->result->parameters->DebquestionOne;
+    $DebquestionTwo = $json->result->parameters->DebquestionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
 
     if(isset($difficulty)){
@@ -17,7 +19,7 @@ if ($method == "POST") {
             case 'quiz':
             case 'Quiz':
                 $speech = "Vous avez raison, mieux vaut commencer léger : commençons par un petit quiz.
-                 Quel figure géométrique est visible sur le drapeau japonais ?";
+                 Première question : quelle est la capitale actuelle du Japon ?";
                 break;
             case 'civilisation':
             case 'Civilisation':
@@ -35,51 +37,53 @@ if ($method == "POST") {
 
     /** Answers for quizz Questions ***/
 
-    $answerQ2 = $json->result->parameters->answerQ2;
-
-    if(isset($answerQ2)){
-        switch($answerQ2){
-            case 'Cercle':
-            case 'cercle':
-                $speech = "Bravo, la réponse est cercle.
-                Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte..
-                Voici une autre question : combien d'îles principales composent le japon?";
+    if(isset($DebquestionOne)){
+        switch($DebquestionOne){
+            case 'Tokyo':
+            case 'tokyo':
+                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
+                           Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
                 break;
         }
     }
 
-    $answerQ3 = $json->result->parameters->answerQ3;
-
-    if(isset($answerQ3)){
-
-        switch ($answerQ3){
-            case 'quatre':
-                case 'Quatre':
-                case '4':
-                $speech = "Génial !";
+    if(isset($DebquestionTwo)){
+        switch($DebquestionTwo){
+            case 'Judo':
+            case 'judo':
+            case 'Judoka':
+            case 'judoka':
+                $speech = "Hm... ce n'est pas la réponse que j'attendais, même si le Judo est effectivement un sport national. Je pensais à quelque chose de plus
+                massif, si vous voyez ce que je veux dire.";
+                break;
+            case 'Sumo':
+            case 'sumo':
+            case 'Sumotori':
+            case 'sumotori':
+                $speech = "Bravo, bonne réponse ! Le Sumo est effectivement très populaire au Japon. Saviez-vous que Jacques Chirac en est un grand amateur ?
+                Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
-                $speech = "Zut alors...";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
                 break;
         }
-
     }
-
 
     if(isset($DebquestionThree)){
         switch($DebquestionThree){
-            case 'Godzilla':
-            case 'godzilla':
-                $speech = "Bonne réponse !
-                Godzilla s'appelle en réalité Gojira. Il figure dans plus d'une vingtaine de films. .
-                Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux sushis sur votre prochaine
-                commande, grâce au code promo suivant : 'TWOSUSHIS'. A plus tard pour un prochain défi !";
+            case 'Thon':
+            case 'thon':
+            case 'Otoro':
+            case 'otoro':
+                $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
+                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             default:
-                $speech = "Aïe, ce n'est pas la bonne réponse... ";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un poisson à la chair bien rouge.";
                 break;
         }
     }
@@ -152,7 +156,5 @@ if ($method == "POST") {
 else {
     echo "Method not allowed";
 }
-
-
 
 ?>
