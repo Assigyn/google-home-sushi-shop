@@ -45,7 +45,7 @@ if ($method == "POST") {
                            Voici une autre question : quel sport fait la fierté des japonais ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
@@ -67,7 +67,7 @@ if ($method == "POST") {
                 Nous arrivons enfin à la question finale. Quel poisson est la star des sushis ?";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un sport qu'on connaît mal au dehors du Japon.";
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
@@ -83,7 +83,7 @@ if ($method == "POST") {
                 commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un poisson à la chair bien rouge.";
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
