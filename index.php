@@ -107,6 +107,7 @@ if ($method == "POST") {
                 $speech = "Vous venez de réciter les couleurs suivantes : noir et blanc. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             case 'Ichi Ni San':
+            case 'Ichi ni San':
             case 'Ichi ni san':
             case 'ichi ni san':
                 $speech = "Bien ! Vous savez désormais compter jusqu'à 3, pas mal. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
