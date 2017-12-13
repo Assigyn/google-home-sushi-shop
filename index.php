@@ -72,7 +72,7 @@ if ($method == "POST") {
         }
     }
 
-    if(isset($questionThree){
+    if(isset($questionThree)){
         switch($questionThree){
             case 'Thon':
             case 'thon':
