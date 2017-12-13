@@ -53,19 +53,20 @@ if ($method == "POST") {
 
     $answerQ3 = $json->result->parameters->answerQ3;
 
+
     if(isset($answerQ3)){
-        switch($answerQ3){
+
+        switch ($answerQ3){
             case 'quatre':
-            case 'Quatre':
-                $speech = "Bravo, bonne réponse !
-                Kyoto possède un temple immense : le pavillon d'or..
-                Nous arrivons enfin à la question finale. Comment s'appelle le monstre le connu au Japon ?";
+                $speech = "Génial !";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse... courage !";
+                $speech = "Zut alors...";
                 break;
         }
+
     }
+
 
     if(isset($DebquestionThree)){
         switch($DebquestionThree){
