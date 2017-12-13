@@ -101,13 +101,15 @@ if ($method == "POST") {
             case 'Anecdote':
             case 'Japon':
             case 'japon':
-                $speech = "Le japon est un pays insulaire, incroyable non ?";
+                $speech = "Le pays est un pays très apprécié par Jacques Chirac. En effet l'ancien président aime énormément 
+                    les Sumotori, au point d'avoir souhaité en être un dans sa prime jeunesse.";
                 break;
             case 'Mot':
             case 'mot':
             case 'japonais':
             case 'Japonais':
-                $speech = "Le mot Nihon, qui signifie Japon, veut dire pays du soleil. ";
+                $speech = "Au Japon, Noël se dit Kurisumassu, et rime souvent avec KFC. Les jeunes japonais sont en effet fous
+                de cette chaine de fast food et n'hésitent pas à s'offrir des ailes de poulet durant ce jour très spécial.";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
