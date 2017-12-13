@@ -50,12 +50,17 @@ if ($method == "POST") {
         }
     }
 
+    unset($questionOne);
+
     if(isset($questionTwo)){
         switch($questionTwo){
             case 'Kyoto':
             case 'kyoto':
                 $speech = "Bonne réponse ! Kyoto possède un temple immense : le pavillon d'or.'
                            Nous arrivons enfin à la dernière question ! Quelle ville était capitale avant Tokyo ?";
+                break;
+            default:
+                $speech = "Désolé, ce n'est pas la bonne réponse.";
                 break;
         }
     }
