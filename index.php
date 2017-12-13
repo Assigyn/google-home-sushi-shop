@@ -11,7 +11,7 @@ if ($method == "POST") {
     $DebquestionOne = $json->result->parameters->DebquestionOne;
     $DebquestionTwo = $json->result->parameters->DebquestionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
-    $MedquestionOne = $json->result->parameters->MedquestionOne;
+    $$MedquestionTwo = $json->result->parameters->MedquestionTwo;
 
     if(isset($difficulty)){
         switch ($difficulty){
@@ -78,16 +78,18 @@ if ($method == "POST") {
         }
     }
 
-    /** Answers for Easy Questions ***/
+    /** Answers for Médium Questions ***/
 
-    if(isset($MedquestionOne)){
-        switch($MedquestionOne){
-            case 'Tokyo':
-                $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
-                           Voici une autre question : quel sport fait la fierté des japonais ?";
+    if(isset($MedquestionTwo)){
+        switch($MedquestionTwo){
+            case 'Couleur':
+                $speech = "Très bon choix. Répétez après moi : Kuroi. Shiroi. Aoi. Akai.";
+                break;
+            case 'Chiffre':
+                $speech = "Quelqu'un qui aime les maths ? Intéressant. Répétez après moi : Itchi. Ni. San. Yon. Go.";
                 break;
             default:
-                $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : cette ville est une des plus densément peulée du monde.";
+                $speech = "Désolé, ce n'est pas la bonne réponse. Veuillez recommencer.";
                 break;
         }
     }
