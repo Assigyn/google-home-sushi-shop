@@ -9,7 +9,7 @@ if ($method == "POST") {
 
     $difficulty = $json->result->parameters->difficulty;
     $questionOne = $json->result->parameters->questionOne;
-    $DebquestionTwo = $json->result->parameters->DebquestionTwo;
+    $questionTwo = $json->result->parameters->questionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
 
     if(isset($difficulty)){
@@ -50,8 +50,8 @@ if ($method == "POST") {
         }
     }
 
-    if(isset($DebquestionTwo)){
-        switch($DebquestionTwo){
+    if(isset($questionTwo)){
+        switch($questionTwo){
             case 'Judo':
             case 'judo':
             case 'Judoka':
