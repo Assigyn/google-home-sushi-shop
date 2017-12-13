@@ -8,7 +8,7 @@ if ($method == "POST") {
     $json = json_decode($requestBody);
 
     $difficulty = $json->result->parameters->difficulty;
-    $DebquestionOne = $json->result->parameters->DebquestionOne;
+    $questionOne = $json->result->parameters->questionOne;
     $DebquestionTwo = $json->result->parameters->DebquestionTwo;
     $DebquestionThree = $json->result->parameters->DebquestionThree;
 
@@ -37,8 +37,8 @@ if ($method == "POST") {
 
     /** Answers for quizz Questions ***/
 
-    if(isset($DebquestionOne)){
-        switch($DebquestionOne){
+    if(isset($questionOne)){
+        switch($questionOne){
             case 'Tokyo':
             case 'tokyo':
                 $speech = "Bonne réponse ! Tokyo est aussi la plus grande ville du Japon. Son agglomération est peuplée de 42 millions d'habitants.
