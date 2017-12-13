@@ -43,7 +43,7 @@ if ($method == "POST") {
             case 'cercle':
                 $speech = "Bravo, la réponse est cercle.
                 Le drapeau du Japon est un des rares à présenter une forme circulaire de la sorte..
-                Voici une autre question : Quelle ville était capitale avant Tokyo ?";
+                Voici une autre question : combien d'îles principales composent le japon?";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse.";
@@ -55,8 +55,8 @@ if ($method == "POST") {
 
     if(isset($answerQ3)){
         switch($answerQ3){
-            case 'Kyoto':
-            case 'kyoto':
+            case 'quatre':
+            case 'Quatre':
                 $speech = "Bravo, bonne réponse !
                 Kyoto possède un temple immense : le pavillon d'or..
                 Nous arrivons enfin à la question finale. Comment s'appelle le monstre le connu au Japon ?";
