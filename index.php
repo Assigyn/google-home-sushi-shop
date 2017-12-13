@@ -89,7 +89,7 @@ if ($method == "POST") {
                 break;
             case 'chiffres':
             case 'chiffre':
-                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : Itchi. Ni. San.";
+                $speech = "Un amateur de mathématiques, intéressant ! Répétez après moi : shi";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
@@ -106,11 +106,12 @@ if ($method == "POST") {
             case 'kuro shiro':
                 $speech = "Vous venez de réciter les couleurs suivantes : noir et blanc. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
-            case 'Ichi Ni San':
-            case 'Ichi ni San':
-            case 'Ichi ni san':
-            case 'ichi ni san':
-                $speech = "Bien ! Vous savez désormais compter jusqu'à 3, pas mal. Dernier effort, récitez après moi : Sushi Shop ga suki desu";
+            case 'Shi':
+            case 'shi':
+            case 'Chi':
+            case 'chi':
+                $speech = "Bien ! Shi est le chiffre 4 en japonais, mais signifie également \"mort\". Il est donc peu utilisé, on
+                lui préfère le mot \"Yon\". Dernier effort, récitez après moi : Sushi Shop ga suki desu";
                 break;
             default:
                 $speech = "Je n'ai pas compris votre choix, désolé.";
