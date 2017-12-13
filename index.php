@@ -79,7 +79,8 @@ if ($method == "POST") {
             case 'Otoro':
             case 'otoro':
                 $speech = "Bonne réponse ! Le Thon Otoro est très populaire au Japon. Dans les restaurants les plus huppés, un sushi Otoro peut coûter l'équivalent d'une
-                trentaine d'euros.";
+                trentaine d'euros. Merci d'avoir participé au quizz de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             default:
                 $speech = "Désolé, ce n'est pas la bonne réponse. Un indice : c'est un poisson à la chair bien rouge.";
@@ -122,17 +123,23 @@ if ($method == "POST") {
             case 'Cinéma':
             case 'cinéma':
                 $speech = "Le Japon a exporté de nombreux films aux quatre coins du globe. Mais c'est surtout l'excellence de ses dessins animés qui est reconnue par tous.
-                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney.";
+                Hayao Miyazaki, grand réalisateur célèbre pour des films comme Princesse Mononoké, est ainsi souvent comparé à Walt Disney. Merci d'avoir participé 
+                à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'musique':
             case 'Musique':
                 $speech = "La musique japonaise est un art qui était autrefois très lié aux arts du théâtre. Aujourd'hui encore malgré l'arrivée des codes occidentaux, il n'est
-                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes.";
+                 pas rare d'entendre des compositions très classiques mélangés aux sons modernes aux élans remarquablement théatraux. Merci d'avoir participé 
+                à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
             case 'littérature':
             case 'Littérature':
                 $speech = "De nombreux auteurs japonais sont connus en France, mais paradoxalement, le plus célèbre d'entre eux est très peu lu par chez nous. Il s'agit de Natsumé
-                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité.";
+                Soseki, auteur de Botchan, livre largement autobiographique lu par tous les écoliers japonais durant leur scolarité. Merci d'avoir participé 
+                à la minute culture de la journée. Sushi Shop est heureux de vous offrir deux california rolls gratuits sur votre prochaine
+                commande, grâce au code promo suivant : CALIFORNIATWO. A plus tard pour un prochain défi !";
                 break;
         }
     }
